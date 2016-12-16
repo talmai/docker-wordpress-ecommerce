@@ -16,7 +16,7 @@ function setup_wp_monei {
     sed -i -e "s/__USER_ID__/$MONEI_USER_ID/g" /monei-settings.json
     sed -i -e "s/__USER_PASSWORD__/$MONEI_PASSWORD/g" /monei-settings.json
 
-    sudo -u www-data wp --path=/var/www/html option update woocommerce-monei-settings --format=json < /monei-settings.json
+    sudo -u www-data wp --path=/var/www/html option update woocommerce_monei_settings --format=json < /monei-settings.json
 }
 
 # MONEI related variables
@@ -26,7 +26,7 @@ export MONEI_PASSWORD=${MONEI_PASSWORD:-""}
 export WORDPRESS_ADMIN_USER=${WORDPRESS_ADMIN_USER:-"admin"}
 export WORDPRESS_ADMIN_PASSWORD=${WORDPRESS_ADMIN_PASSWORD:-"adminadmin"}
 export WORDPRESS_ADMIN_EMAIL=${WORDPRESS_ADMIN_EMAIL:-"my@example.com"}
-export WORDPRESS_ADMIN_PASSWORD=${WORDPRESS_SITE_TITLE:-"My Woocommerce store"}
+export WORDPRESS_SITE_TITLE=${WORDPRESS_SITE_TITLE:-"My Woocommerce store"}
 export WORDPRESS_SITE_DESCRIPTION=${WORDPRESS_SITE_DESCRIPTION:-"With MONEI preinstalled"}
 export WORDPRESS_SITE_URL=${WORDPRESS_SITE_URL:-"http://localhost"}
 export WORDPRESS_HOME=${WORDPRESS_HOME:-"http://localhost"}

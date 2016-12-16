@@ -1,3 +1,6 @@
+# Usage:
+# docker-compose build && docker-compose up
+# docker-compose exec wordpress wp-monei-setup
 version: '2'
 
 services:

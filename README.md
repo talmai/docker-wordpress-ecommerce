@@ -1,5 +1,5 @@
-# docker-wordpress-monei
-This repository contains the Dockerfile for the autobuild of wordpress-with-monei docker image, which is a Wordpress image with e-Commerce capabilities providing Woocommerce and [MONEI](https://monei.net/) payment gateway.
+# docker-wordpress-monei [Github](https://github.com/MONEI/docker-wordpress-monei)
+This repository contains the Dockerfile for the autobuild of wordpress-with-monei docker image, which is a Wordpress image with e-Commerce capabilities providing Woocommerce and [MONEI](https://monei.net/) **Payment Gateway**.
 
 ## What you will get
 An official Wordpress to create a Store, more customizable along with the MONEI Payment Gateway and Woocommerce plugins included.
