@@ -2,22 +2,26 @@ version: '2'
 
 services:
   mariadb:
-    image: bitnami/mariadb:latest
-    volumes:
-      - mariadb_data:/bitnami/mariadb
+    image: mariadb
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
   wordpress:
-    #image: bitnami/wordpress:latest
-    #image: bitnami/wordpress:4.6.1-r7
     build: .
-    depends_on:
+    depends_on: 
       - mariadb
+    links:
+      - mariadb:mysql
     ports:
       - '80:80'
       - '443:443'
-    volumes:
-      - wordpress_data:/bitnami/wordpress
-      - apache_data:/bitnami/apache
-      - php_data:/bitnami/php
+    environment:
+      WORDPRESS_DB_HOST: mariadb:3306
+      WORDPRESS_DB_PASSWORD: password
+      MONEI_CHANNEL_ID: some_channel
+      WORDPRESS_SITE_TITLE: some_site_title
+      WORDPRESS_ADMIN_PASSWORD: 1234 
 
 volumes:
   mariadb_data:
