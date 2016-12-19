@@ -53,8 +53,4 @@ Contributions are always welcome!
 Developed by [microapps](http://microapps.com/)
 
 ## License
-<<<<<<< 326425d22fed556577523daec90915a07aff5b01
-docker-wordpress-monei is available under the MIT license. See the LICENSE file for more info.
-=======
 wordpress-monei is available under the MIT license. See the LICENSE file for more info.
->>>>>>> Updating names
