@@ -1,7 +1,6 @@
 # Installs WordPress with MONEI plugin preinstalled
 # Github Repo: https://github.com/MONEI/docker-wordpress-monei
 
-#FROM wordpress:4.6.1-php5.6-fpm
 FROM wordpress:4.6.1-php5.6-apache
 
 # Add sudo in order to run wp-cli as the www-data user 

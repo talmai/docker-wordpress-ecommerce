@@ -1,5 +1,5 @@
-# docker-wordpress-monei
-This [repository](https://github.com/MONEI/docker-wordpress-monei) contains the Dockerfile for the autobuild of wordpress-with-monei docker image, which is a Wordpress image with e-Commerce capabilities providing Woocommerce and [MONEI](https://monei.net/) **Payment Gateway**.
+# wordpress-monei
+This [repository](https://github.com/MONEI/wordpress-monei) contains the Dockerfile for the autobuild of wordpress-monei docker image, which is a Wordpress image with e-Commerce capabilities providing Woocommerce and [MONEI](https://monei.net/) **Payment Gateway**.
 
 ## What you will get
 An official Wordpress to create a Store, fully customizable along with the MONEI Payment Gateway and Woocommerce plugins included.
@@ -7,7 +7,7 @@ An official Wordpress to create a Store, fully customizable along with the MONEI
 ## How
 The Dockerfile uses the official WordPress image and adds MONEI, Woocommerce and a setup script.
 
-    docker run --name <containername> monei/wordpress-with-monei
+    docker run --name <containername> monei/wordpress-monei
 
 ## Usage
 Running this image will give you a empty Wordpress instance, if you want to perform an unattended installation you just need to run:
@@ -53,4 +53,8 @@ Contributions are always welcome!
 Developed by [microapps](http://microapps.com/)
 
 ## License
+<<<<<<< 326425d22fed556577523daec90915a07aff5b01
 docker-wordpress-monei is available under the MIT license. See the LICENSE file for more info.
+=======
+wordpress-monei is available under the MIT license. See the LICENSE file for more info.
+>>>>>>> Updating names
