@@ -46,7 +46,6 @@ But also we add some more:
 **WORDPRESS_HOME**: By default *http://localhost*.
 
 
-
 ## Contributing
 Contributions are always welcome!
 
