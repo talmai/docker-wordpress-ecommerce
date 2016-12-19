@@ -1,5 +1,5 @@
 # Installs WordPress with MONEI plugin preinstalled
-# Github Repo: https://github.com/MONEI/docker-wordpress-monei
+# Github Repo: https://github.com/MONEI/wordpress-monei
 
 FROM wordpress:4.6.1-php5.6-apache
 
