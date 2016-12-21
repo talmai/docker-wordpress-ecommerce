@@ -22,12 +22,19 @@ But also we add some more:
 
 ### MONEI related variables
 
-**MONEI_CHANNEL_ID**: Your MONEI Channel ID.
+**MONEI_OPERATION_MODE**: Your MONEI operation mode. (live/test), by default *test*.
 
-**MONEI_USER_ID**: Your MONEI User ID.
+**MONEI_TEST_CHANNEL_ID**: Your MONEI test Channel ID.
 
-**MONEI_PASSWORD**: Your MONEI User Password.
+**MONEI_TEST_USER_ID**: Your MONEI test User ID.
 
+**MONEI_TEST_PASSWORD**: Your MONEI test User Password.
+
+**MONEI_LIVE_CHANNEL_ID**: Your MONEI live Channel ID.
+
+**MONEI_LIVE_USER_ID**: Your MONEI live User ID.
+
+**MONEI_LIVE_PASSWORD**: Your MONEI live User Password.
 
 ### Extra Wordpress variables to customize the installation
 

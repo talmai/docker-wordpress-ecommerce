@@ -12,17 +12,33 @@ function setup_wp_monei {
 
     sudo -u www-data wp --path=/var/www/html plugin install https://github.com/MONEI/WooCommerce/archive/master.zip --activate
 
-    sed -i -e "s/__CHANNEL_ID__/$MONEI_CHANNEL_ID/g" /monei-settings.json
-    sed -i -e "s/__USER_ID__/$MONEI_USER_ID/g" /monei-settings.json
-    sed -i -e "s/__USER_PASSWORD__/$MONEI_PASSWORD/g" /monei-settings.json
+    
+    sed -i -e "s/__TEST_CHANNEL_ID__/$MONEI_TEST_CHANNEL_ID/g" /monei-settings.json
+    sed -i -e "s/__TEST_USER_ID__/$MONEI_TEST_USER_ID/g" /monei-settings.json
+    sed -i -e "s/__TEST_USER_PASSWORD__/$MONEI_TEST_PASSWORD/g" /monei-settings.json
+
+    sed -i -e "s/__LIVE_CHANNEL_ID__/$MONEI_LIVE_CHANNEL_ID/g" /monei-settings.json
+    sed -i -e "s/__LIVE_USER_ID__/$MONEI_LIVE_USER_ID/g" /monei-settings.json
+    sed -i -e "s/__LIVE_USER_PASSWORD__/$MONEI_LIVE_PASSWORD/g" /monei-settings.json
+
+    sed -i -e "s/__OPERATION_MODE__/$MONEI_OPERATION_MODE/g" /monei-settings.json
 
     sudo -u www-data wp --path=/var/www/html option update woocommerce_monei_settings --format=json < /monei-settings.json
+    sudo -u www-data wp --path=/var/www/html option update woocommerce_gateway_order --format=json < /woocommerce-gateway-order.json
 }
 
 # MONEI related variables
-export MONEI_CHANNEL_ID=${MONEI_CHANNEL_ID:-""}
-export MONEI_USER_ID=${MONEI_USER_ID:-""}
-export MONEI_PASSWORD=${MONEI_PASSWORD:-""}
+export MONEI_OPERATION_MODE=${MONEI_OPERATION_MODE:-"test"}
+
+export MONEI_TEST_CHANNEL_ID=${MONEI_TEST_CHANNEL_ID:-""}
+export MONEI_TEST_USER_ID=${MONEI_TEST_USER_ID:-""}
+export MONEI_TEST_PASSWORD=${MONEI_TEST_PASSWORD:-""}
+
+export MONEI_LIVE_CHANNEL_ID=${MONEI_LIVE_CHANNEL_ID:-""}
+export MONEI_LIVE_USER_ID=${MONEI_LIVE_USER_ID:-""}
+export MONEI_LIVE_PASSWORD=${MONEI_LIVE_PASSWORD:-""}
+
+# Wordpress related variables 
 export WORDPRESS_ADMIN_USER=${WORDPRESS_ADMIN_USER:-"admin"}
 export WORDPRESS_ADMIN_PASSWORD=${WORDPRESS_ADMIN_PASSWORD:-"adminadmin"}
 export WORDPRESS_ADMIN_EMAIL=${WORDPRESS_ADMIN_EMAIL:-"my@example.com"}
