@@ -73,9 +73,11 @@ Array
 )
 ```
 
-## Customization
+### Customization
 We support all the configuration variables provided in the official Docker WordPress [ReadMe](https://github.com/docker-library/docs/tree/master/wordpress). 
 But also we add some more:
+
+---
 
 ### MONEI related variables
 
@@ -93,6 +95,8 @@ But also we add some more:
 
 **MONEI_LIVE_PASSWORD**: Your MONEI live User Password.
 
+---
+
 ### Extra Wordpress variables to customize the installation
 
 **WORDPRESS_ADMIN_USER**: The name of the admin user, by default *admin*.
@@ -108,6 +112,8 @@ But also we add some more:
 **WORDPRESS_SITE_URL**: By default *http://localhost*.
 
 **WORDPRESS_HOME**: By default *http://localhost*.
+
+---
 
 ## License
 docker-wordpress-ecommerce is available under the MIT license. See the LICENSE file for more info.
