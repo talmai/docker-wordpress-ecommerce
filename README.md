@@ -52,12 +52,8 @@ But also we add some more:
 
 **WORDPRESS_HOME**: By default *http://localhost*.
 
-
-## Contributing
-Contributions are always welcome!
+## License
+docker-wordpress-ecommerce is available under the MIT license. See the LICENSE file for more info.
 
 ## Credits
 Forked from [MONEI](https://github.com/MONEY/wordpress-monei) and initially developed by [microapps](http://microapps.com/)
-
-## License
-docker-wordpress-ecommerce is available under the MIT license. See the LICENSE file for more info.
