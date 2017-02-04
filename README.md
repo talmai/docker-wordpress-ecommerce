@@ -5,7 +5,7 @@ This [repository](https://github.com/talmai/docker-wordpress-ecommerce) contains
 
 The Dockerfile uses the official WordPress image and adds MONEI, WooCommerce and a setup script.
 
-    docker run --name <containername> talmai/wordpress-ecommerce
+    docker run --name <containername> -e WORDPRESS_DB_PASSWORD=... talmai/wordpress-ecommerce
 
 ---
 
