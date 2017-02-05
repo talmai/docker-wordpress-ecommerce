@@ -42,9 +42,9 @@ function setup_wp_themes {
 # Wordpress related variables 
 export WORDPRESS_ADMIN_USER=${WORDPRESS_ADMIN_USER:-"admin"}
 export WORDPRESS_ADMIN_PASSWORD=${WORDPRESS_ADMIN_PASSWORD:-"adminadmin"}
-export WORDPRESS_ADMIN_EMAIL=${WORDPRESS_ADMIN_EMAIL:-"my@example.com"}
+export WORDPRESS_ADMIN_EMAIL=${WORDPRESS_ADMIN_EMAIL:-"my@email.com"}
 export WORDPRESS_SITE_TITLE=${WORDPRESS_SITE_TITLE:-"My Woocommerce store"}
-export WORDPRESS_SITE_DESCRIPTION=${WORDPRESS_SITE_DESCRIPTION:-"With MONEI preinstalled"}
+export WORDPRESS_SITE_DESCRIPTION=${WORDPRESS_SITE_DESCRIPTION:-"With WooCommerce + Theme preinstalled"}
 export WORDPRESS_SITE_URL=${WORDPRESS_SITE_URL:-"http://localhost:8080"}
 export WORDPRESS_HOME=${WORDPRESS_HOME:-"http://localhost:8080"}
 
