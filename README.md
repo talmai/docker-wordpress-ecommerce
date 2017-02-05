@@ -5,11 +5,11 @@ This [repository](https://github.com/talmai/docker-wordpress-ecommerce) contains
 
 This image requires you to have a running MySQL container.
 
-    run --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -d mysql:5.7
+    docker run --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -d mysql:5.7
 
 The Dockerfile uses the official WordPress image and adds MONEI, WooCommerce and a setup script.
 
-    docker run --name <containername> --link wordpressdb:mysql -d -e WORDPRESS_DB_PASSWORD=... talmai/wordpress-ecommerce
+    docker run --name wordpress-ecommerce --link wordpressdb:mysql -d -v "$PWD/":/var/www/html talmai/wordpress-ecommerce
 
 Or via `docker-compose`
 
