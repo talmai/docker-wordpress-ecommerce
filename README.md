@@ -18,7 +18,7 @@ Or via `docker-compose`
 
 Running this image will give you a empty Wordpress instance, if you want to perform an unattended installation you just need to run:
     
-    docker exec <containername> wp-monei-setup [-e ...]
+    docker exec <containername> wp-themes-setup [-e ...]
 
 Which will install default themes to WooCommerce as well.
 
