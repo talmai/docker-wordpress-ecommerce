@@ -9,7 +9,8 @@ This image requires you to have a running MySQL container.
 
 The Dockerfile uses the official WordPress image and adds MONEI, WooCommerce and a setup script.
 
-    docker run --name wordpress-ecommerce --link wordpressdb:mysql -d -v "$PWD/wp_folder":/var/www/html -p 8080:80 talmai/wordpress-ecommerce
+    docker run --name wordpress-ecommerce --link wordpressdb:mysql -d -v "$PWD/wp_folder":/var/www/html \
+    -p 8080:80 talmai/wordpress-ecommerce
 
 Or via `docker-compose`
 
