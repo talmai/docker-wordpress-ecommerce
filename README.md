@@ -1,5 +1,5 @@
 # docker-wordpress-ecommerce
-This [repository](https://github.com/talmai/docker-wordpress-ecommerce) contains the Dockerfile for the autobuild of docker-wordpress-ecommerce docker image, which is a Wordpress image with e-Commerce capabilities providing [WooCommerce](https://github.com/woocommerce/woommerce) and [MONEI](https://monei.net/) **Payment Gateway**.
+This [repository](https://github.com/talmai/docker-wordpress-ecommerce) contains the Dockerfile for the autobuild of docker-wordpress-ecommerce docker image, which is a Wordpress image with e-Commerce capabilities providing [WooCommerce](https://github.com/woocommerce/woommerce).
 
 ---
 
@@ -7,7 +7,7 @@ This image requires you to have a running MySQL container.
 
     docker run --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -d mysql:5.7
 
-The Dockerfile uses the official WordPress image and adds MONEI, WooCommerce and a setup script.
+The Dockerfile uses the official WordPress image:
 
     docker run --name wordpress-ecommerce --link wordpressdb:mysql -d -v "$PWD/wp_folder":/var/www/html \
     -p 8080:80 talmai/wordpress-ecommerce
@@ -15,6 +15,12 @@ The Dockerfile uses the official WordPress image and adds MONEI, WooCommerce and
 Or via `docker-compose`
 
     docker-compose up
+
+Running this image will give you a empty Wordpress instance, if you want to perform an unattended installation you just need to run:
+    
+    docker exec <containername> wp-monei-setup [-e ...]
+
+Which will install default themes to WooCommerce as well.
 
 Wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
 
@@ -36,22 +42,6 @@ This image supports all the configuration variables provided in the official Doc
 
 If the `WORDPRESS_DB_NAME` specified does not already exist on the given MySQL server, it will be created automatically upon startup of the wordpress container, provided that the `WORDPRESS_DB_USER` specified has the necessary permissions to create it.
 
-In addition to those, we add MONEI related variables:
-
-**-e MONEI_OPERATION_MODE=...**: Your MONEI operation mode. (live/test), by default *test*.
-
-**-e MONEI_TEST_CHANNEL_ID=...**: Your MONEI test Channel ID.
-
-**-e MONEI_TEST_USER_ID=...**: Your MONEI test User ID.
-
-**-e MONEI_TEST_PASSWORD=...**: Your MONEI test User Password.
-
-**-e MONEI_LIVE_CHANNEL_ID=...**: Your MONEI live Channel ID.
-
-**-e MONEI_LIVE_USER_ID=...**: Your MONEI live User ID.
-
-**-e MONEI_LIVE_PASSWORD=...**: Your MONEI live User Password.
-
 As well as extra Wordpress variables to customize the installation:
 
 **-e WORDPRESS_ADMIN_USER=...**: The name of the admin user, by default *admin*.
@@ -67,14 +57,6 @@ As well as extra Wordpress variables to customize the installation:
 **-e WORDPRESS_SITE_URL=...**: By default *http://localhost*.
 
 **-e WORDPRESS_HOME=...**: By default *http://localhost*.
-
-## Usage
-
-Running this image will give you a empty Wordpress instance, if you want to perform an unattended installation you just need to run:
-    
-    docker exec <containername> wp-monei-setup [-e ...]
-
-Leveraging the combination of variables documented in the previous section. 
 
 ## Extensions enabled
 

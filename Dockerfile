@@ -23,7 +23,7 @@ RUN pecl install apcu && docker-php-ext-enable apcu
 RUN pecl install gmagick-beta && docker-php-ext-enable gmagick
 
 COPY rootfs /
-RUN mv /wp-monei-setup.sh /bin/wp-monei-setup && chmod +x /bin/wp-monei-setup
+RUN mv /wp-themes-setup.sh /bin/wp-themes-setup && chmod +x /bin/wp-themes-setup
 
 # Add WP-CLI 
 RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
