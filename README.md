@@ -7,14 +7,16 @@ This image requires you to have a running MySQL container.
 
     docker run --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -d mysql:5.7
 
-The Dockerfile uses the official WordPress image:
+The Dockerfile uses the official WordPress image. Note that the following command assumes you have a folder called `wp_folder`:
 
     docker run --name wordpress-ecommerce --link wordpressdb:mysql -d -v "$PWD/wp_folder":/var/www/html \
     -p 8080:80 talmai/wordpress-ecommerce
 
+
 Or via `docker-compose`
 
     docker-compose up
+
 
 Running this image will give you a empty Wordpress instance, if you want to perform an unattended installation you just need to run:
     
