@@ -1,6 +1,5 @@
 # Pull base image
 FROM wordpress:4.7-php7.1-apache
-MAINTAINER Talmai Oliveira <to@talm.ai>
 
 # enable mod_rewrite
 RUN a2enmod rewrite
