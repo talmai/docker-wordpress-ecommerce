@@ -1,4 +1,8 @@
 # docker-wordpress-ecommerce
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/talmai/wordpress-ecommerce.svg)](https://hub.docker.com/r/talmai/wordpress-ecommerce/)
+[![Docker Stars](https://img.shields.io/docker/stars/talmai/wordpress-ecommerce.svg)](https://hub.docker.com/r/talmai/wordpress-ecommerce/)
+
 This [repository](https://github.com/talmai/docker-wordpress-ecommerce) contains the Dockerfile for the autobuild of docker-wordpress-ecommerce docker image, which is a Wordpress image with e-Commerce capabilities providing [WooCommerce](https://github.com/woocommerce/woommerce).
 
 ---
